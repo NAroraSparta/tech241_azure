@@ -121,3 +121,5 @@ An image is a preconfigured software template or snapshot that contains the nece
 ```
 
 
+[Single_Azure _VM.odt](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2FSingle_Azure%20_VM.odt)
+
