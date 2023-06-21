@@ -87,19 +87,31 @@ chmod 400 <keyname>
 ```
 Virtulisation
 What is virtualisation?
-Virtualisation is the process of creating a virtual version of a resource, such as an operating system, server, storage device, or network, to simulate the behaviour of the physical counterpart.
+Virtualization is the process of creating a virtual version of a resource or system, such as a computer hardware platform, operating system, storage device, or network resource. It enables the creation and management of multiple virtual instances or environments that can run independently on a single physical machine or infrastructure.
 
 What is a virtual machine?
-A virtual machine (VM) is a software emulation of a physical computer, allowing multiple operating systems or applications to run on a single physical machine.
+ A Virtual Machine (VM) is a compute resource that uses software instead of a physical computer to run programs and deploy apps. One or more virtual “guest” machines run on a physical “host” machine.  Each virtual machine runs its own operating system and functions separately from the other VMs, even when they are all running on the same host. This means that, for example, a virtual MacOS virtual machine can run on a physical PC. 
 
 Where can they be run?
-Virtual machines can be run on various platforms, including desktop computers, servers, cloud infrastructure, and data centres.
+A virtual machine runs in a window on the host computer and gives a user the same experience they would have if they were using a completely different computer. Virtual machines can be run on various platforms, including desktop computers, servers, cloud infrastructure, and data centres.
 
 What determines how many can run?
-The number of virtual machines that can run depends on the available resources, such as CPU, memory, storage, and network bandwidth of the underlying physical machine or virtualisation host.
+The number of virtual machines that can run depends on the following factors:
+
+Hardware Resources: The available hardware resources on the host machine play a crucial role. CPU, memory (RAM), storage, and network bandwidth are important factors. The more powerful the hardware, the higher the number of VMs it can support. CPUs with multiple cores/threads, larger amounts of RAM, and faster storage subsystems are beneficial for running more VMs.
+
+Hypervisor or Virtualization Platform: The hypervisor or virtualization platform being used can affect the number of VMs. Different hypervisors have varying levels of efficiency and resource management capabilities. Some hypervisors are more optimized and can handle a larger number of VMs.
+
+VM Specifications: The specifications of individual VMs impact the number that can run concurrently. VMs with higher CPU, memory, and disk requirements will consume more resources, limiting the total number of VMs that can be accommodated.
+
+Workload and Resource Allocation: The workload running within each VM and the resource allocation policies influence the number of VMs. If the workload is demanding and resource-intensive, it may require more resources, reducing the overall number of VMs that can be run.
+
+Overhead and Management: Each VM incurs some overhead for management, monitoring, and communication with the hypervisor. As the number of VMs increases, this overhead may consume more resources, reducing the available capacity for additional VMs.
+
+Networking and I/O: Network bandwidth and I/O capabilities can impact the number of VMs. If VMs are heavily reliant on network communication or require significant I/O operations, the available bandwidth or I/O throughput can become a limiting factor.
 
 What does a virtual machine include?
-A virtual machine includes a virtualised hardware environment (processor, memory, storage), an operating system, and any software applications installed within it.
+A virtual machine includes a virtualised hardware environment (processor, memory, storage), Virtual Hardware, Guest operating system, Configuration Files, Disk images, Networking Infrastructure and any software applications installed within it.
 
 What software is required to orchestrate/run the virtual machines?
 To orchestrate and run virtual machines, specialised software called a hypervisor or virtual machine monitor (VMM) is required. Examples include VMware vSphere, Microsoft Hyper-V, and KVM (Kernel-based Virtual Machine).
