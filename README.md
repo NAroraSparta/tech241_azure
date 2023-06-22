@@ -27,6 +27,9 @@ Security and Identity: Azure provides robust security features and services to h
 
 ![Azure_cloud.JPG](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2FAzure_cloud.JPG)
 
+
+![Azure_Services.JPG](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2FAzure_Services.JPG)
+
 ![scope-levels.png](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2Fscope-levels.png)
 ```azure
 The statement you provided outlines four levels of organization commonly used in cloud computing environments, particularly in Microsoft Azure. These levels are:
