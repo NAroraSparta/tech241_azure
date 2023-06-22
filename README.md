@@ -27,7 +27,7 @@ Security and Identity: Azure provides robust security features and services to h
 
 
 
-
+![scope-levels.png](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2Fscope-levels.png)
 ```azure
 The statement you provided outlines four levels of organization commonly used in cloud computing environments, particularly in Microsoft Azure. These levels are:
 
@@ -40,7 +40,9 @@ Resource Groups: Resource groups are containers that help organize and manage re
 Resources: Resources are the individual components and services that you deploy and manage within Azure. Examples of resources include virtual machines, storage accounts, databases, virtual networks, and more. Resources are typically grouped within resource groups for better organization and management.
 ```
 
-```python
+
+![Azure_VM.JPG](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2FAzure_VM.JPG)
+```
 Steps for setting up an Azure VM
 
 1. Install Git Bash
@@ -82,6 +84,13 @@ chmod 400 <keyname>
 21. ls -a to check hidden files
 22. Stop vm on azure portal if you are not using it. 
 ```
+
+
+
+![shared-responsibility.png](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2Fshared-responsibility.png)
+
+
+![cloud-providers-market-share-2022.png](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2Fcloud-providers-market-share-2022.png)
 
 
 ```
