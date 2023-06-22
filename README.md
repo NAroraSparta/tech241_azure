@@ -1,5 +1,5 @@
 ```azure
-What is AZURE cloud?
+# What is AZURE cloud?
 Azure is a cloud computing platform and a suite of services offered by Microsoft. It provides a wide range of cloud-based services for building, deploying, and managing applications and services through Microsoft-managed data centers. Azure offers a comprehensive set of tools and services that enable developers, IT professionals, and businesses to leverage the power of the cloud.
 
 Some key features and services provided by Azure include:
@@ -25,7 +25,7 @@ DevOps: Azure DevOps services enable teams to plan, develop, test, and deliver a
 Security and Identity: Azure provides robust security features and services to help protect your applications and data. It includes Azure Active Directory for identity and access management, Azure Security Center for threat detection and monitoring, and Azure Key Vault for securely storing and managing cryptographic keys and secrets.
 ```
 
-
+![Azure_cloud.JPG](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2FAzure_cloud.JPG)
 
 ![scope-levels.png](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2Ftech_241_azure%2Fscope-levels.png)
 ```azure
