@@ -202,8 +202,9 @@ kill -9 <PID>                   To kill with brute force
 10. sudo systemctl status mongod
 11. sudo systemctl start mongod
 12. sudo systemctl enable mongod
-13. export DB_HOST=mongodb://20.254.109.117:27017/posts
-14. printenv DB_HOST
-15. npm install
-16. npm start
-17. go to the ip address from Azure Sparta_app VM and paste it into google address bar as <ip address>:3000/posts
+13. Go to Sparta_app git bash and run commands 14-17 there.
+14. export DB_HOST=mongodb://20.254.109.117:27017/posts(Go to your DB VM and add port 27017 there)
+15. printenv DB_HOST
+16. npm install
+17. npm start
+18. go to the ip address from Azure Sparta_app VM and paste it into google address bar as <ip address>:3000/posts
