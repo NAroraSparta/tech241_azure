@@ -206,4 +206,4 @@ kill -9 <PID>                   To kill with brute force
 14. printenv DB_HOST
 15. npm install
 16. npm start
-17. go to the ip address from Azure VM and paste it into google address bar as <ip address>:3000/posts
+17. go to the ip address from Azure Sparta_app VM and paste it into google address bar as <ip address>:3000/posts
