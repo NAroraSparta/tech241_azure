@@ -209,3 +209,71 @@ kill -9 <PID>                   To kill with brute force
 18. npm install
 19. npm start
 20. go to the ip address from Azure Sparta_app VM and paste it into google address bar as <ip address>:3000/posts
+
+# Automation -Start the Sparta app with a script (no database)
+
+## Edit the provision.sh file:
+ 
+ #!/bin/bash
+
+# update
+sudo apt update -y
+
+# upgrade
+sudo apt upgrade -y
+
+# install nginx
+sudo apt install nginx -y
+
+# restart nginx
+sudo systemctl restart nginx
+# enable nginx - make sure that when the virtual machine restarts nginx will automatically start
+
+sudo systemctl enable nginx
+
+# setup node
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+# install node
+sudo apt install nodejs -y
+sudo npm install pm2 -g
+
+# copy app.js folder
+
+cd ~
+git clone https://github.com/ElenaCKay/tech241_aparta_app.git sparta_app
+
+cd sparta_app
+cd app
+
+# run test app in the background
+
+npm install
+pm2 start app.js
+
+# Configure Mongo DB VM (including bindIp) with a script
+
+#!/bin/bash
+
+# update
+sudo apt update -y
+
+# upgrade
+sudo apt upgrade -y
+
+# install the correct version of Mongo DB
+
+wget -qO - https://www.mongodb.org/static/pgp/server-3.2.asc | sudo apt-key add -
+sudo apt update -y
+sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20
+
+# configure the bindIp to 0.0.0.0 (Hint: use sed command)
+
+sed 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+
+# start and enable Mongo DB
+
+sudo systemctl start mongod
+sudo systemctl enable mongod
+
+
