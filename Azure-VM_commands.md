@@ -246,7 +246,7 @@ sudo npm install pm2 -g
 
 cd ~
 
-git clone https://github.com/ElenaCKay/tech241_aparta_app.git sparta_app
+git clone https://github.com/NAroraSparta/tech241_sparta_app.git
 
 cd sparta_app
 cd app
@@ -302,8 +302,7 @@ sudo systemctl enable nodejs
 
 
 # copy app folder
-git clone https://github.com/RyanJohal/tech241_sparta_app.git app
-
+git clone https://github.com/NAroraSparta/tech241_sparta_app.git
 
 # Run app in the background using PM2
 cd /home/adminuser/app/app2
