@@ -345,6 +345,7 @@ npm install
 ## Running node app in the background using &
 
 nohup node app.js </dev/null &>/dev/null &
+
 without </dev/null> we would get the message:
 
 nohup:ignoring input and appending output to 'nohup.out'
