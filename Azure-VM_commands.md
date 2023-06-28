@@ -169,8 +169,11 @@ sudo npm install pm2 -g                 pm helps run apps in the background (PM2
 cd tech241_sparta_app/              You need to be inside the sparta_app to run/install npm commands
 
 ls
+
 npm install                         saves any specified packages into dependencies by default
+
 ls
+
 node app.js                         Node.js is a platform for building fast and scalable server applications using JavaScript. Node.js is the runtime and npm is the Package Manager for Node.js modules.
 
 Go to azure networking and add port 3000 and TCP so that you can access the sparta_app.
