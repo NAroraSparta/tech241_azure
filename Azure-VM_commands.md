@@ -309,6 +309,8 @@ cd /home/adminuser/app/app2
 pm2 start app.js --name "sparta app"
 
 
+
+
 # Configure Mongo DB VM (including bindIp) with a script
 
 #!/bin/bash
