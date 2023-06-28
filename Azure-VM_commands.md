@@ -213,95 +213,88 @@ kill -9 <PID>                   To kill with brute force
 19. npm start
 20. go to the ip address from Azure Sparta_app VM and paste it into google address bar as <ip address>:3000/posts
 
-# Automation -Start the Sparta app with a script (no database)
 
-## Edit the provision.sh file:
+
+## Automation -Start the Sparta app with a script (no database)
+
+### Edit the provision.sh file:
  
  #!/bin/bash
 
-# update
+### update
 sudo apt update -y
 
-# upgrade
+### upgrade
 sudo apt upgrade -y
 
-# install nginx
+### install nginx
+
 sudo apt install nginx -y
 
-# restart nginx
+### restart nginx
+
 sudo systemctl restart nginx
-# enable nginx - make sure that when the virtual machine restarts nginx will automatically start
+
+### enable nginx - make sure that when the virtual machine restarts nginx will automatically start
 
 sudo systemctl enable nginx
 
-# setup node
+### setup node
+
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
-# install node
-sudo apt install nodejs -y
+### install node
 
+sudo apt install nodejs -y
 sudo npm install pm2 -g
 
-# copy app.js folder
+### copy app.js folder
 
 cd ~
-
 git clone https://github.com/NAroraSparta/tech241_sparta_app.git
-
 cd sparta_app
 cd app
 
-# run test app in the background
+### run test app in the background
 
 npm install
-
 pm2 start app.js
 
 
-# # Starting sparta app with script
+### Starting sparta app with script
 #!/bin/bash
 
-# update
+### update
 sudo apt update -y
 
-
-# upgrade
+### upgrade
 sudo apt upgrade -y
 
-
-# install nginx
+### install nginx
 sudo apt install nginx -y
 
-
-# restart nginx
+### restart nginx
 sudo systemctl restart nginx
 
-
-# enable nginx - will auto start on reboot
+### enable nginx - will auto start on reboot
 sudo systemctl enable nginx
 
-
-# access correct node source
+### access correct node source
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
-
-# add in env
+### add in env
 export DB_HOST=mongodb://172.187.178.145:27017/posts
 
-
-# install node.js
+### install node.js
 sudo apt install nodejs -y
 
-
-# run app in background
+### run app in background
 sudo npm install -g pm2
 
-
-# enable node.js - will auto start on reboot
+### enable node.js - will auto start on reboot
 sudo systemctl enable nodejs
 
-
-# copy app folder
+### copy app folder
 git clone https://github.com/NAroraSparta/tech241_sparta_app.git
 
 # Run app in the background using PM2
@@ -309,9 +302,7 @@ cd /home/adminuser/app/app2
 pm2 start app.js --name "sparta app"
 
 
-
-
-# Configure Mongo DB VM (including bindIp) with a script
+### Configure Mongo DB VM (including bindIp) with a script
 
 #!/bin/bash
 
@@ -328,20 +319,19 @@ echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse"$
 
 sudo apt update -y
 
-# Install a specific release of MongoDB Enterprise
+## Install a specific release of MongoDB Enterprise
 sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=$
 
-# Configure the bindIp to 0.0.0.0 (Hint: use sed command)
+## Configure the bindIp to 0.0.0.0 (Hint: use sed command)
 sudo sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/g' /etc/mongod.conf
 
-# Restart Mongo Db
+## Restart Mongo Db
 sudo systemctl restart mongod
 
-# Enable Mongo DB
+## Enable Mongo DB
 sudo systemctl enable mongod
 
-
-# To run the script in git bash
+## To run the script in git bash
 ./provision.sh 
 
 ## Connect VMs
