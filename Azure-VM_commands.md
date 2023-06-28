@@ -150,8 +150,11 @@ SSH into VM & git clone
 ## scp command
 
 will need the private key
+
 path to folder
+
 adminuser@IP address
+
 scp -i ~/.ssh/tech241-neha-az-key -r ./app adminuser@40.120.57.73:/home/adminuser/tech241-sparta-app
 
 rsync
