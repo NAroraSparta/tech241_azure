@@ -239,11 +239,13 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 # install node
 sudo apt install nodejs -y
+
 sudo npm install pm2 -g
 
 # copy app.js folder
 
 cd ~
+
 git clone https://github.com/ElenaCKay/tech241_aparta_app.git sparta_app
 
 cd sparta_app
