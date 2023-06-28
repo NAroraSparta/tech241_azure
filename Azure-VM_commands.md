@@ -1,9 +1,9 @@
-# What is Bash?
+## What is Bash?
 ## Bourne Again SHell Unix was a text based operating system. Bash is an upgraded version of what was used in Unix.
 
 /bin/bash
 
-# What is a Shell?
+## What is a Shell?
 ## It is a software that basically provides interface to run commands.
 
 ###  There are multiple shells
@@ -14,30 +14,29 @@ ps -p $$ -              shows the processes that we are running (-p $$ specyfing
 
 !22 -                   ran the command from history under the number 22
 
-# For making a bash script, create a file with .sh extension. This is for nginx.
+## For making a bash script, create a file with .sh extension. This is for nginx.
 
 ##   #!/bin/bash
 
-# update the sources 
+## update the sources 
 sudo apt update -y
 
-# upgrade (sometimes you dont want to upgrade because it installs new packages that might be incompatible with the existing softwares versions.)
+## upgrade (sometimes you dont want to upgrade because it installs new packages that might be incompatible with the existing softwares versions.)
 sudo apt upgrade -y
 
-# install nginx
+## install nginx
 sudo apt install nginx -y
 
-# To view status of your Nginx server
+## To view status of your Nginx server
 sudo systemctl status nginx
 
-# restart nginx
+## restart nginx
 sudo systemctl restart nginx
 
-# enable nginx    #- nginx will auto start on restart/reboot
+## enable nginx    #- nginx will auto start on restart/reboot
 sudo systemctl enable nginx
 
 curl <url> --output <name of the file we want to save the data> - saving the data to the actual file we specified
-
 
 rm -r <directory name> - removing directory -r means recursive. It will remove wverything inside the folder as well
 
@@ -50,7 +49,7 @@ tree -                       tree structure for files and folders for where you 
 
 sudo apt update -y -        update sources list just in case package is not on the list. -y to agree for the questions
 
-# Scripting
+## Scripting
 ## Making a script file
 
 touch provision.sh - 
@@ -69,7 +68,7 @@ nano provision.sh -                  open editor to write commands
 
 ## In the given script, systemctl is used to interact with Nginx service.
 
-# Environment variables
+## Environment variables
 value stored in memory, it can be accessible by other tools in Linux
 
 printenv -                              printing all environment variables and values e.g USER, PATH,
@@ -90,7 +89,7 @@ source .bashrc - reload edited configuration file
 
 After all these steps env variable will be persistent after next time we log in
 
-# IP addressess:
+## IP addressess:
 Public IP address (associated VM)
 
 ### static - (default Azure) stays the same even when VM is restarted
@@ -147,7 +146,8 @@ create a folder "tech241-sparta-app" on your local machine
 copy app folder to your local reo
 sync with your remote repo on GitHub
 SSH into VM & git clone
-scp command
+
+## scp command
 
 will need the private key
 path to folder
