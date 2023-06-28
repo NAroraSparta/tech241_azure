@@ -342,5 +342,21 @@ npm start
 npm install
 
 
+## Running node app in the background using &
+
+nohup node app.js </dev/null &>/dev/null &
+without </dev/null> we would get the message:
+
+nohup:ignoring input and appending output to 'nohup.out'
+
+nohup means no hang up - which means that process will be still running even if we log out from the terminal. if we don't mention nohup the user processes will hang up when we exit the terminal.
+
+and terminal would be occupied.
+
+ps2 is a better solution because we can force rerunning the app. with nohup keyword port 3000 would be occupied.
+
+when you run a bash script shell in bash it kind of create subshell. after the script finishes it hang up the subshell and all the user processes withing. to prevent that you need to add nohup.
+
+
 
 
