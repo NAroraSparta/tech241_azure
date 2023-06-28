@@ -344,6 +344,13 @@ sudo systemctl enable mongod
 # To run the script in git bash
 ./provision.sh 
 
-sudo systemctl enable mongod
+## Connect VMs
+
+export DB_HOST=mongodb://:27017/posts
+Add import rule to allow port 27017
+npm start
+npm install
+
+
 
 
