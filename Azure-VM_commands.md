@@ -361,6 +361,10 @@ ps2 is a better solution because we can force rerunning the app. with nohup keyw
 
 when you run a bash script shell in bash it kind of create subshell. after the script finishes it hang up the subshell and all the user processes withing. to prevent that you need to add nohup.
 
+
+## Automate MongoDB with an automatic script
+1. nano provision.sh
+
 #!/bin/bash
 
 # update
@@ -383,7 +387,14 @@ cd ~
 
 # start and enable Mongo DB
 sudo systemctl start mongod
+
 sudo systemctl enable mongod
+2. Come back to Git Bash and run the following commands.
+
+sudo nano /etc/mongod.conf
+sudo systemctl status mongod
+./provision.sh
+
 
 
 
