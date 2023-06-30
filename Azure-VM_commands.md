@@ -397,15 +397,56 @@ sudo systemctl status mongod
 
 
 
+## Blob Storage
+
+### Accessing the API
+
+az login
+
+### creating storage account
+
+az storage account create --name tech24nehastorage --resource-group tech241 --location uksouth --sku Standard_LRS
+
+sku is redundancy type
+
+### list all storage accounts
+
+az storage account list --resource-group tech241
+
+### choose the bits you want to take from json
+
+az storage account list --resource-group tech241 --query "[].{Name:name, Location:location, Kind:kind}" --output table
+
+### creating container. \ is to break commands up into lines (not necessary)
+
+az storage container create \ --account-name tech24nehastorage \ --name democontainer
+
+### Create a text file
+touch test.txt
+
+### uploading file we created
+
+az storage blob upload --account-name tech24nehastorage --container-name democontainer --name newname.txt --file test.txt --auth-mode login
+
+### check blobs in container
+
+az storage blob list --account-name tech24nehastorage --container-name democontainer  --output table --auth-mode login
 
 ### Adding an image to the sparta app from Blob
 SSH into your Azure VM
+
 Install Azure CLI on your Azure VM - this will give you access to the az command.
+
 Login to Azure
+
 Download a cat picture (jpg) of your choice to your VM - name is newcat.jpg
+
 Upload the cat picture to Azure blob storage (Hint: You will first need a storage account + container) - in blob storage the same file should be called uploadedcat.jpg
+
 Set access permissions so it can be viewed by the public
+
 Modify the file index.ejs (found in views folder inside the app folder) - add an  tag to the HTML so display the uploadedcat.jpg image on the Sparta front page.
+
 Run the app (no database) to check your blob image displays on the Sparta test app's front page.
 
 ### Documentation of the process
