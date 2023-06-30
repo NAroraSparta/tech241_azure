@@ -398,6 +398,21 @@ sudo systemctl status mongod
 
 
 
+### Adding an image to the sparta app from Blob
+SSH into your Azure VM
+Install Azure CLI on your Azure VM - this will give you access to the az command.
+Login to Azure
+Download a cat picture (jpg) of your choice to your VM - name is newcat.jpg
+Upload the cat picture to Azure blob storage (Hint: You will first need a storage account + container) - in blob storage the same file should be called uploadedcat.jpg
+Set access permissions so it can be viewed by the public
+Modify the file index.ejs (found in views folder inside the app folder) - add an  tag to the HTML so display the uploadedcat.jpg image on the Sparta front page.
+Run the app (no database) to check your blob image displays on the Sparta test app's front page.
+
+### Documentation of the process
+1. Use curl to download the image directly from a URL onto the VM.
+
+2. To add new files and edit existing ones, you have to change permission for some files and directories in the app folder.
+
 
 
 
