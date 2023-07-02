@@ -42,7 +42,9 @@ sudo systemctl restart nginx
 
 ## enable nginx    #- nginx will auto start on restart/reboot
 sudo systemctl enable nginx
+```
 
+```
 curl <url> --output <name of the file we want to save the data> - saving the data to the actual file we specified
 
 rm -r <directory name> - removing directory -r means recursive. It will remove wverything inside the folder as well
