@@ -192,16 +192,19 @@ scp -i ~/.ssh/tech241-neha-az-key -r ./app adminuser@40.120.57.73:/home/adminuse
 rsync
 ```
 
+rm -rf <file_name>              To delete the named file/folder forcefully and recursively.
+
+
 ```
 ### Steps to access the Sparta_App using nodejs #####
-
-rm -rf <file_name>              To delete the named file/folder forcefully and recursively.
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 sudo apt install nodejs -y              To install node.js on your local Ubuntu Linux machine
 
-sudo npm install pm2 -g                 pm helps run apps in the background (PM2 is an advanced process manager for running Node.js applications. That provides an easier option to automate a Node.js application.)
+sudo npm install pm2 -g            
+
+pm helps run apps in the background (PM2 is an advanced process manager for running Node.js applications. That provides an easier option to automate a Node.js application.)
 
 cd tech241_sparta_app/              You need to be inside the sparta_app to run/install npm commands
 
@@ -211,7 +214,9 @@ npm install                         saves any specified packages into dependenci
 
 ls
 
-node app.js                         Node.js is a platform for building fast and scalable server applications using JavaScript. Node.js is the runtime and npm is the Package Manager for Node.js modules.
+node app.js                         Node.js is a platform for building fast and scalable server 
+
+applications using JavaScript. Node.js is the runtime and npm is the Package Manager for Node.js modules.
 
 Go to azure networking and add port 3000 and TCP so that you can access the sparta_app.
 
