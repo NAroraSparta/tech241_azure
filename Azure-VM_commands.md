@@ -42,6 +42,10 @@ sudo systemctl restart nginx
 
 ## enable nginx    #- nginx will auto start on restart/reboot
 sudo systemctl enable nginx
+
+Go to app folder on Git Bash and run 2 commands:
+1. npm install
+2. npm start   OR   node app.js
 ```
 
 ```
