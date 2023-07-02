@@ -1,4 +1,4 @@
-# What is Bash?
+``` # What is Bash?
 ## Bourne Again SHell Unix was a text based operating system. Bash is an upgraded version of what was used in Unix.
 
 /bin/bash
@@ -13,7 +13,9 @@ cat /etc/shells -       listing all different shells installed in your os
 ps -p $$ -              shows the processes that we are running (-p $$ specyfing current process)
 
 !22 -                   ran the command from history under the number 22
+```
 
+```
 # For making a bash script, create a file with .sh extension. This is for nginx.
 
 ##   #!/bin/bash
@@ -49,7 +51,9 @@ tree commands
 tree -                       tree structure for files and folders for where you currently are
 
 sudo apt update -y -        update sources list just in case package is not on the list. -y to agree for the questions
+```
 
+```
 # Scripting
 ## Making a script file
 
@@ -68,7 +72,9 @@ nano provision.sh -                  open editor to write commands
 ## systemctl is a command-line tool used to control and manage systemd services in Linux. Systemd is a system and service manager that provides a range of funcionalities including, starting, stopping and monitoring services.
 
 ## In the given script, systemctl is used to interact with Nginx service.
+```
 
+```
 # Environment variables
 value stored in memory, it can be accessible by other tools in Linux
 
@@ -89,13 +95,17 @@ export CATSNAME=Bobby
 source .bashrc - reload edited configuration file
 
 After all these steps env variable will be persistent after next time we log in
+```
 
+```
 # IP addressess:
 Public IP address (associated VM)
 
 ### static - (default Azure) stays the same even when VM is restarted
 ### dynamic - (default AWS) - changes IP every restart of your VM
+```
 
+```
 ## Processes
 2 types:
 
@@ -104,7 +114,9 @@ Public IP address (associated VM)
 Process is like a program that loaded to RAM. If your CPU has 1 core basically CPU can run 1 process at the time. Multicores can do more. OS needs to prioritize processes. Which one most important.
 
 PID - process ID (every process has a process ID)
+```
 
+```
 How to start and kill the process
 sleep <number of seconds> - puts terminal to sleep (puts foreground) for certain amount of time
 
@@ -123,13 +135,18 @@ kill -9 <process ID> - the harshest way of killing the process. Brute force stub
 ps -ef - shows parent process ID
 
 sudo systemctl - way to control system processes
+```
 
+```
 ## Sparta test app
 Node js app
 port 3000
 2 features
 a front page (no database if we just want to display front page)
 posts page that shows some information from database
+```
+
+```
 Requirements to run Sparta app
 
 ### Linux VM - Ubuntu 18.04 LTS
@@ -147,6 +164,9 @@ create a folder "tech241-sparta-app" on your local machine
 copy app folder to your local reo
 sync with your remote repo on GitHub
 SSH into VM & git clone
+```
+
+```
 scp command
 
 will need the private key
@@ -155,7 +175,9 @@ adminuser@IP address
 scp -i ~/.ssh/tech241-neha-az-key -r ./app adminuser@40.120.57.73:/home/adminuser/tech241-sparta-app
 
 rsync
+```
 
+```
 ### Steps to access the Sparta_App using nodejs #####
 
 rm -rf <file_name>              To delete the named file/folder forcefully and recursively.
@@ -175,19 +197,25 @@ node app.js                         Node.js is a platform for building fast and 
 
 Go to azure networking and add port 3000 and TCP so that you can access the sparta_app.
 
+npm start                       To start the process again
+```
+
+```
 ctrl + z                        is used to suspend a process. (This means that the program or command you are running will be temporarily halted and put in the background, taking up no resources. This can be useful if you need to free up RAM or CPU cycles for other tasks.)
 
 ps aux                          To monitor processes running on your Linux system.
 
-npm start                       To start the process again
-
 kill -1 <PID>                   To kill process, go slow first.
 kill <PID>                      To kill process forcefully
 kill -9 <PID>                   To kill with brute force
+```
 
+```
 ### ctrl c is used to kill a process. It terminates your program.
 ### ctrl z is used to pause the process. It will not terminate your program, it will keep your program in background. You can restart your program from that point where you used ctrl z.
+```
 
+```
 ## Requirements to run Database VM
 
 1. sudo apt update -y
@@ -207,3 +235,4 @@ kill -9 <PID>                   To kill with brute force
 15. npm install
 16. npm start
 17. go to the ip address from Azure VM and paste it into google address bar as <ip address>:3000/posts
+```
