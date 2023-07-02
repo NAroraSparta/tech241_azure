@@ -135,3 +135,52 @@ An image is a preconfigured software template or snapshot that contains the nece
 
 [Single_Azure _VM.odt](..%2F..%2F..%2FDesktop%2FMy%20docs%2FSparta_Global%2FSingle_Azure%20_VM.odt)
 
+
+
+## Automation - Start the Sparta app with a script (no database)
+
+#!/bin/bash
+
+# Update
+sudo apt update
+echo "Updated"
+# Upgrade
+sudo apt upgrade -y
+echo "Upgraded"
+# Install nginx
+sudo apt install nginx -y
+echo "Nginx installed"
+# Restart nginx
+sudo systemctl restart nginx
+echo "Nginx restarted"
+# Enable nginx
+sudo systemctl enable nginx
+echo "Nginx enabled"
+#  Get app folder
+sudo git clone https://github.com/FPM-Spartan/tech241-sparta-app.git app
+echo "App folder cloned"
+# Install nodejs
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt install nodejs -y
+echo "nodejs installed"
+# Install pm2
+sudo npm install pm2 -g
+echo "pm2 installed"
+# give app folder correct permissions
+sudo chmod  777 app
+echo "app folder permissions changed"
+ls -l
+#  Create env var to allow connection to db vm
+export DB_HOST=mongodb://172.187.179.103:27017/posts
+#  Go to app directory
+cd  app
+pwd
+echo "current directory correct"
+# Install npm
+npm install -y
+echo "npm installed"
+# Start npm
+# nohup node app.js >/dev/null 2>&1 #(OLD VERSION)
+pm2 start 'npm start'
+echo "app started"
+
