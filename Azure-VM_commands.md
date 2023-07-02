@@ -1,6 +1,6 @@
 ```## Azure- How to automate using scripts?
-
-## What is a Shell?
+```
+# What is a Shell?
 ## It is a software that basically provides interface to run commands.
 
 ###  There are multiple shells
@@ -9,23 +9,19 @@ cat /etc/shells -       listing all different shells installed in your os
 
 ps -p $$ -              shows the processes that we are running (-p $$ specyfing current process)
 
-!22 -                   ran the command from history under the number 22
+!22 
+ran the command from history under the number 22
 
-## What is Bash?
->>>>>>> refs/remotes/origin/main
+```
+# What is Bash? 
+
 ## Bourne Again SHell Unix was a text based operating system. Bash is an upgraded version of what was used in Unix.
 
 /bin/bash
-
-
 ```
 
-<<<<<<< HEAD
 ```
 # For making a bash script, create a file with .sh extension. This is for nginx.
-=======
-## For making a bash script, create a file with .sh extension. This is for nginx.
->>>>>>> refs/remotes/origin/main
 
 ##   #!/bin/bash
 
@@ -61,12 +57,9 @@ tree -                       tree structure for files and folders for where you 
 sudo apt update -y -        update sources list just in case package is not on the list. -y to agree for the questions
 ```
 
-<<<<<<< HEAD
 ```
 # Scripting
-=======
-## Scripting
->>>>>>> refs/remotes/origin/main
+
 ## Making a script file
 
 touch provision.sh - 
@@ -86,12 +79,8 @@ nano provision.sh -                  open editor to write commands
 ## In the given script, systemctl is used to interact with Nginx service.
 ```
 
-<<<<<<< HEAD
 ```
 # Environment variables
-=======
-## Environment variables
->>>>>>> refs/remotes/origin/main
 value stored in memory, it can be accessible by other tools in Linux
 
 printenv -                              printing all environment variables and values e.g USER, PATH,
@@ -113,12 +102,9 @@ source .bashrc - reload edited configuration file
 After all these steps env variable will be persistent after next time we log in
 ```
 
-<<<<<<< HEAD
 ```
-# IP addressess:
-=======
 ## IP addressess:
->>>>>>> refs/remotes/origin/main
+
 Public IP address (associated VM)
 
 ### static - (default Azure) stays the same even when VM is restarted
@@ -184,15 +170,10 @@ create a folder "tech241-sparta-app" on your local machine
 copy app folder to your local reo
 sync with your remote repo on GitHub
 SSH into VM & git clone
-<<<<<<< HEAD
-```
+
 
 ```
-scp command
-=======
-
 ## scp command
->>>>>>> refs/remotes/origin/main
 
 will need the private key
 
@@ -519,4 +500,4 @@ Run the app (no database) to check your blob image displays on the Sparta test a
 
 
 
->>>>>>> refs/remotes/origin/main
+
